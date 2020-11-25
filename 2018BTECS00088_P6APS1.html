@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Internal Style sheets-->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-header {
+            text-align: center;
+            background-color: cadetblue;
+            margin: 0 0 30px 0;
+            padding: 20px;
+            border-bottom: solid 1px black;
+
+        }
+
+        main {
+            margin: 15px 35px;
+        }
+
+        input:not([type=image]),
+        textarea {
+            margin: 10px 60px 25px 5px;
+            display: inline-block;
+            line-height: 25px;
+            min-width: 300px;
+        }
+
+        input[type=radio],
+        input[type=checkbox] {
+            margin: 10px;
+            min-width: 0px;
+        }
+
+        label {
+            margin: 5px;
+        }
+
+        input[type=image] {
+            margin-bottom: -20px;
+        }
+
+        #checkbox {
+            height: 20px;
+            width: 20px;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        button {
+            margin: 20px 30px 0 0px;
+            padding: 15px 20px;
+            background-color: #5cb85c;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: .5s;
+        }
+
+        button[type=submit]:hover {
+            background-color: #218838;
+            color: white;
+        }
+
+        button[type=reset] {
+            background-color: #428bca;
+        }
+
+        button[type=reset]:hover {
+            background-color: #3a77ad;
+            color: white;
+        }
+
+        footer {
+            background-color: #172336;
+            color: whitesmoke;
+            font-size: smaller;
+            padding: 20px;
+        }
+    </style>
+    <title>Google Services Survey</title>
+</head>
+
+<body>
+    <!-- 		    Main Header part 			-->
+    <header>
+        <h1 class="main-header">Consumer's Survey Site</h1>
+    </header>
+
+    <!-- 			Main Survey part 			-->
+    <main>
+        <header class="surver-header">
+            <h1 style="color: #1aa260;">Google Services Consumer Feedback Survey</h1>
+            <p>The purpose of this form is to receive feedback from your users regarding the services provided by
+                Google.
+            </p>
+            <hr />
+        </header>
+
+        <!-- Feedback Survey form -->
+        <form name="Google Feedback" onsubmit="alert('hello')" autocomplete="on" method="POST" action="/">
+            <fieldset>
+                <legend><b>Google services survey</b></legend>
+
+                <b>1. Enter the email address which you use to access Google Services?</b>
+                <br />
+                <input type="email" name="email" id="email" placeholder="Enter your email address..." autofocus
+                    required>
+                <br />
+
+                <b>2. What is your overall opinion of Google Services in general?</b>
+                <br />
+                <textarea name="opinion" placeholder="Express your opinion here..." rows="5" cols="100"
+                    maxlength="500"></textarea>
+                <br />
+
+                <b>3. What disappointed you the most about Google Services?</b><br />
+                <input type="radio" id="quality" name="disappointment" value="quality" required>
+                <label for="quality">Quality</label>
+                <br />
+                <input type="radio" id="price" name="disappointment" value="price">
+                <label for="price">Price</label>
+                <br />
+                <input type="radio" id="usability" name="disappointment" value="usability">
+                <label for="usability">Usability</label>
+                <br />
+                <input type="radio" id="customer service" name="disappointment" value="customer service">
+                <label for="customer service">Customer Service</label>
+                <br /><br />
+
+                <b>4. Upload any file(image/pdf/txt) containing logs of error/crashes or bugs that you may have found in
+                    Google Services</b>
+                <br />
+                <label for="files">Select a file:</label><br />
+                <input type="file" id="files" name="files" accept="image/*,application/pdf,text/*"><br />
+
+                <b>5. What part/s of Google services do you feel needs the most improvement?(Check all that apply)</b>
+                <br />
+                <input type="checkbox" id="quality2" name="improvement" value="quality" required>
+                <label for="quality2">Quality</label>
+                <br />
+                <input type="checkbox" id="pricing" name="improvement" value="price">
+                <label for="pricing">Pricing</label>
+                <br />
+                <input type="checkbox" id="usability2" name="improvement" value="usability">
+                <label for="usability2">Usability</label>
+                <br />
+                <input type="checkbox" id="customer service2" name="improvement" value="customer service">
+                <label for="customer service2">Customer Service</label>
+                <br /><br />
+
+                <b>6. How do you rate your overall satisfaction with Google Services?</b>
+                <br />
+                <input type="number" name="rating" id="rating" min="0" max="10"
+                    placeholder="Rate Google Services (0 to 10) " required style="width: 250px">
+                <br />
+                <input id="checkbox" type="checkbox" required />
+                <label for="checkbox"> I agree to these <a href="#">Terms and Conditions</a>.</label>
+            </fieldset>
+
+            <!-- submit button won't work as action file is not written-->
+            <button type="submit" value="Submit">Submit</button>
+            <button type="reset">Reset form</button>
+            <input type="image" src="https://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/google-icon.png"
+                alt="Google icon" height="50">
+        </form>
+
+    </main>
+
+    <br>
+    <hr />
+
+    <footer>
+        <span>Copyright&copy; 2020 Consumer's survey. All rights reserved</span>
+    </footer>
+
+</body>
+
+</html>
